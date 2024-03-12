@@ -9,7 +9,8 @@ function App() {
     name: "John Doe",
     email: "johnny@johnny.com",
     phoneNumber: "+66 666-66-66",
-    address: "Amsterdam, The Netherlands"
+    address: "Amsterdam, The Netherlands",
+    bio: "Sometimes I get confused and try to smell the stars..."
   })
 
   return (

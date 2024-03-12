@@ -15,6 +15,6 @@ label {
   margin-top: 1rem;
 }
 
-#address {
+textarea {
   height: 60px;
 }

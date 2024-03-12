@@ -34,6 +34,12 @@ export default function Personal({state, setState}) {
         state={state}
         setState={setState}
       />
+      <Textarea
+        property="bio"
+        label="Bio"
+        state={state}
+        setState={setState}
+      />
     </>
   )
 }
