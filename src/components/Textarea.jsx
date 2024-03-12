@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
 import '../styles/Input.css'
 
-export default function Input({property, label, type, state, setState}) {
+export default function Textarea({property, label, state, setState}) {
   return (
     <div className="inputWrapper">
       <label className="label">
         {label}
       </label>
-      <input
+      <textarea
         id={property} 
-        type={type} 
         value={state[property]}
         onChange={(e) => {
           const newValue = {...state, [property]: e.target.value}

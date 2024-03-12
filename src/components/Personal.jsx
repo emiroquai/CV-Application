@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // import { useState } from "react";
 import Input from "./Input";
+import Textarea from "./Textarea";
 
 export default function Personal({state, setState}) {
 
@@ -28,10 +29,9 @@ export default function Personal({state, setState}) {
         state={state}
         setState={setState}
       />
-      <Input
+      <Textarea
         property="address"
         label="Address"
-        type="text"
         state={state}
         setState={setState}
       />
