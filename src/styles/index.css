@@ -33,11 +33,16 @@ header {
 main {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 3fr 5fr;
 }
 
 #sidebar {
   padding: 2vw;
+}
+
+#previewSection {
+  display: grid;
+  justify-content: center;
 }
 
 h1 {
