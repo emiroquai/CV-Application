@@ -19,7 +19,7 @@ function App() {
       </header>
       <main>
         <div id='sidebar'>
-          <Card>
+          <Card title="Personal Info">
             <Personal 
               state={personal}
               setState={setPersonal}

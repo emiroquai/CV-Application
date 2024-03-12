@@ -7,7 +7,6 @@ export default function Personal({state, setState}) {
 
   return (
     <>
-      <h2 className="cardTitle">Personal Info</h2>
       <Input
         property="name" 
         label= "Name"

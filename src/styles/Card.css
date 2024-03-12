@@ -6,4 +6,6 @@
   flex-direction: column;
   border-radius: 6px;
   box-shadow: rgba(145, 255, 0, 0.709) 0px 3px 8px;
+  cursor: pointer;
 }
+
