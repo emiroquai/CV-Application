@@ -3,6 +3,7 @@ import './styles/App.css'
 import Card from './components/Card'
 import Personal from './components/Personal'
 import Experience from './components/Experience'
+import Education from './components/Education'
 import Preview from './components/Preview'
 
 function App() {
@@ -33,6 +34,15 @@ function App() {
     },
     ])
 
+  const [education, setEducation] = useState([
+    {
+      school: "Moon Space Lab",
+      degree: "BcS. Kerbal Science",
+      startDate: "2020-09-01",
+      endDate: "2024-06-01",
+    },
+  ])
+
   return (
     <>
       <header>
@@ -52,11 +62,19 @@ function App() {
               setState={setExperience}
             />
           </Card>
+          <Card title="Education">
+            <Education 
+              state={education}
+              setState={setEducation}
+            />
+          </Card>
+
         </div>
         <div id='previewSection'>
           <Preview
             personal={personal}
             experience={experience}
+            education={education}
           />
         </div>
       </main>

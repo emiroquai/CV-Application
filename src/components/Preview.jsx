@@ -5,7 +5,7 @@ import { mdiPhone } from '@mdi/js';
 import { mdiEmail } from '@mdi/js';
 import { mdiMapMarker } from '@mdi/js';
 
-export default function Preview({ personal, experience }) {
+export default function Preview({ personal, experience, education }) {
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-UK', {
@@ -25,7 +25,7 @@ export default function Preview({ personal, experience }) {
           <p><Icon path={mdiMapMarker}/> {personal[0].address}</p>
         </div>
         <div id='bioPreview'>
-          <em>{'"'}{personal.bio}{'"'}</em>
+          <em>{'"'}{personal[0].bio}{'"'}</em>
         </div>
       </div>
       <div id="experiencePreview">
@@ -44,6 +44,22 @@ export default function Preview({ personal, experience }) {
           
         })}
       </div>
+      <div id="educationPreview">
+        <h2 className='sectionTitle'>Education</h2>
+        {education.map((item, index) => {
+          return (
+            <div key={index} className="experience">
+              <h3 className='jobTitle'>🔬 {education[index].degree} @{education[index].school}</h3>
+              <div className="datesWrapper">
+                <p className='date'>{formatDate(education[index].startDate)} -</p>
+                <p className='date'>{formatDate(education[index].endDate)}</p>
+              </div>
+            </div>
+          )
+          
+        })}
+      </div>
+
     </div>
   )
 }
