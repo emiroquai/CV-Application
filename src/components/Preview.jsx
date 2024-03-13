@@ -6,6 +6,15 @@ import { mdiEmail } from '@mdi/js';
 import { mdiMapMarker } from '@mdi/js';
 
 export default function Preview({ personal, experience }) {
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-UK', {
+      year: 'numeric',
+      month: 'long',
+      // day: 'numeric'
+    });
+  };
+
   return (
     <div id="preview">
       <div id="personalPreview">
@@ -26,8 +35,8 @@ export default function Preview({ personal, experience }) {
             <div key={index} className="experience">
               <h3 className='jobTitle'>🚀 {experience[index].job} @{experience[index].employer}</h3>
               <div className="datesWrapper">
-                <p className='date'>{experience[index].startDate} -</p>
-                <p className='date'>{experience[index].endDate}</p>
+                <p className='date'>{formatDate(experience[index].startDate)} -</p>
+                <p className='date'>{formatDate(experience[index].endDate)}</p>
               </div>
               <p className='description'>{experience[index].description}</p>
             </div>
