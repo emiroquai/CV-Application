@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import '../styles/Input.css'
 
-export default function Textarea({property, label, state, setState}) {
+export default function Textarea({property, label, index, state, setState}) {
   return (
     <div className="inputWrapper">
       <label className="label">
@@ -9,10 +9,14 @@ export default function Textarea({property, label, state, setState}) {
       </label>
       <textarea
         id={property} 
-        value={state[property]}
+        value={state[index][property]}
         onChange={(e) => {
-          const newValue = {...state, [property]: e.target.value}
-          setState(newValue)
+          const newValue = state.map((item, stateIndex) =>
+            stateIndex === index
+              ? { ...item, [property]: e.target.value }
+              : item,
+          );
+          setState(newValue);
         }}
       />
     </div>

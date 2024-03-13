@@ -7,6 +7,7 @@ export default function Personal({state, setState}) {
   return (
     <>
       <Input
+        index={0}
         property="name" 
         label= "Name"
         type= "text"
@@ -14,6 +15,7 @@ export default function Personal({state, setState}) {
         setState={setState}
       />
       <Input
+        index={0}
         property="email"
         label="Email"
         type="email"
@@ -21,6 +23,7 @@ export default function Personal({state, setState}) {
         setState={setState}
       />
       <Input
+        index={0}
         property="phoneNumber"
         label="Phone Number"
         type="tel"
@@ -28,12 +31,14 @@ export default function Personal({state, setState}) {
         setState={setState}
       />
       <Textarea
+        index={0}
         property="address"
         label="Address"
         state={state}
         setState={setState}
       />
       <Textarea
+        index={0}
         property="bio"
         label="Bio"
         state={state}

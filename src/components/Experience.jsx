@@ -12,35 +12,40 @@ export default function Experience({state, setState}) {
         return (
           <div key={index} className="formWrapper">
             <Input
+              index={index}
               property="job"
               label="Job"
               type="text"
-              state={state[index]}
+              state={state}
               setState={setState} />
             <Input
+              index={index}
               property="employer"
               label="Employer"
               type="text"
-              state={state[index]}
+              state={state}
               setState={setState} />
             <div className="dateWrapper">
               <Input
+                index={index}
                 property="startDate"
                 label="Start"
                 type="date"
-                state={state[index]}
+                state={state}
                 setState={setState} />
               <Input
+                index={index}
                 property="endDate"
                 label="End"
                 type="date"
-                state={state[index]}
+                state={state}
                 setState={setState} />
             </div>
             <Textarea
+              index={index}
               property="description"
               label="Description"
-              state={state[index]}
+              state={state}
               setState={setState} />
             <DeleteButton
               index={index}

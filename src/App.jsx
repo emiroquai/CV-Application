@@ -6,13 +6,15 @@ import Experience from './components/Experience'
 import Preview from './components/Preview'
 
 function App() {
-  const [personal, setPersonal] = useState({ 
+  const [personal, setPersonal] = useState([
+    { 
     name: "John Doe",
     email: "johnny@johnny.com",
     phoneNumber: "+66 666-66-66",
     address: "Amsterdam, The Netherlands",
     bio: "Sometimes I get confused and try to smell the stars...",
-  })
+    }
+  ])
 
   const [experience, setExperience] = useState([
     {

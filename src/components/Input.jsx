@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import '../styles/Input.css'
 
-export default function Input({ property, label, type, state, setState} ) {
+export default function Input({ property, label, type, index, state, setState} ) {
 
   return (
     <div className="inputWrapper">
@@ -11,10 +11,14 @@ export default function Input({ property, label, type, state, setState} ) {
       <input
         id={property} 
         type={type} 
-        value={state[property]}
+        value={state[index][property]}
         onChange={(e) => {
-          const newValue = {...state, [property]: e.target.value}
-          setState(newValue)
+          const newValue = state.map((item, stateIndex) =>
+            stateIndex === index
+              ? { ...item, [property]: e.target.value }
+              : item,
+          );
+          setState(newValue);
         }}
       />
     </div>

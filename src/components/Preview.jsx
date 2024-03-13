@@ -10,10 +10,10 @@ export default function Preview({ personal, experience }) {
     <div id="preview">
       <div id="personalPreview">
         <div>
-          <h1>{personal.name}</h1>
-          <p><Icon path={mdiEmail} /> {personal.email}</p>
-          <p><Icon path={mdiPhone} /> {personal.phoneNumber}</p>
-          <p><Icon path={mdiMapMarker}/> {personal.address}</p>
+          <h1>{personal[0].name}</h1>
+          <p><Icon path={mdiEmail} /> {personal[0].email}</p>
+          <p><Icon path={mdiPhone} /> {personal[0].phoneNumber}</p>
+          <p><Icon path={mdiMapMarker}/> {personal[0].address}</p>
         </div>
         <div id='bioPreview'>
           <em>{'"'}{personal.bio}{'"'}</em>
