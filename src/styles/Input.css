@@ -9,6 +9,7 @@ input, textarea {
   background-color: #d9d7d7;
   padding: 0.5rem;
   margin: 0.3rem 0;
+  font-family: inherit;
 }
 
 label {

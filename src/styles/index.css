@@ -38,6 +38,7 @@ main {
 
 #sidebar {
   padding: 2vw;
+  min-width: 350px;
 }
 
 #previewSection {

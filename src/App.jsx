@@ -37,7 +37,7 @@ function App() {
   const [education, setEducation] = useState([
     {
       school: "Moon Space Lab",
-      degree: "BcS. Kerbal Science",
+      degree: "BSc Kerbal Science",
       startDate: "2020-09-01",
       endDate: "2024-06-01",
     },
