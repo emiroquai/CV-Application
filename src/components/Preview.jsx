@@ -5,7 +5,7 @@ import { mdiPhone } from '@mdi/js';
 import { mdiEmail } from '@mdi/js';
 import { mdiMapMarker } from '@mdi/js';
 
-export default function Preview({ personal }) {
+export default function Preview({ personal, experience }) {
   return (
     <div id="preview">
       <div id="personalPreview">
@@ -18,6 +18,22 @@ export default function Preview({ personal }) {
         <div id='bioPreview'>
           <em>{'"'}{personal.bio}{'"'}</em>
         </div>
+      </div>
+      <div id="experiencePreview">
+        <h2 className='sectionTitle'>Experience</h2>
+        {experience.map((item, index) => {
+          return (
+            <div key={index} className="experience">
+              <h3 className='jobTitle'>🚀 {experience[index].job} @{experience[index].employer}</h3>
+              <div className="datesWrapper">
+                <p className='date'>{experience[index].startDate} -</p>
+                <p className='date'>{experience[index].endDate}</p>
+              </div>
+              <p className='description'>{experience[index].description}</p>
+            </div>
+          )
+          
+        })}
       </div>
     </div>
   )

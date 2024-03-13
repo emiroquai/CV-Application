@@ -25,8 +25,8 @@ function App() {
     {
       job: "Asteroid Scrubber", 
       employer: "SpaceY",
-      startDate: "02/2025",
-      endDate: "06/2035",
+      startDate: "2025-02-13",
+      endDate: "2035-06-01",
       description: "Scrubby scrubby scrub scrub the space rocks, all day long."
     },
     ])
@@ -54,6 +54,7 @@ function App() {
         <div id='previewSection'>
           <Preview
             personal={personal}
+            experience={experience}
           />
         </div>
       </main>
