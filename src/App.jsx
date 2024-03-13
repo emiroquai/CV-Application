@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './styles/App.css'
 import Card from './components/Card'
 import Personal from './components/Personal'
+import Experience from './components/Experience'
 import Preview from './components/Preview'
 
 function App() {
@@ -10,8 +11,25 @@ function App() {
     email: "johnny@johnny.com",
     phoneNumber: "+66 666-66-66",
     address: "Amsterdam, The Netherlands",
-    bio: "Sometimes I get confused and try to smell the stars..."
+    bio: "Sometimes I get confused and try to smell the stars...",
   })
+
+  const [experience, setExperience] = useState([
+      {
+        job: "Senior Asteroid Miner Manager", 
+        employer: "SpaceY",
+        startDate: "2035-06-01",
+        endDate: "2040-10-03",
+        description: "Meetings in space, all day long."
+      },
+      {
+        job: "Asteroid Scrubber", 
+        employer: "SpaceY",
+        startDate: "02/2025",
+        endDate: "06/2035",
+        description: "Scrubby scrubby scrub scrub the space rocks, all day long."
+      },
+    ])
 
   return (
     <>
@@ -24,6 +42,12 @@ function App() {
             <Personal 
               state={personal}
               setState={setPersonal}
+            />
+          </Card>
+          <Card title="Experience">
+            <Experience 
+              state={experience}
+              setState={setExperience}
             />
           </Card>
         </div>

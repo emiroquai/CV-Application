@@ -6,7 +6,7 @@ import { mdiMenuDownOutline } from '@mdi/js';
 import { useState } from 'react';
 
 export default function Card({ title, children }) {
-  const [showState, setShowState] = useState(true)
+  const [showState, setShowState] = useState(false)
   const handleToggleShow = () => {
     setShowState(!showState)
   }

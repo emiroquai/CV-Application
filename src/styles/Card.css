@@ -7,5 +7,16 @@
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.709) 0px 3px 8px;
   cursor: pointer;
+  margin-bottom: 2vw;
 }
 
+.formWrapper {
+  margin-bottom: 2vh;
+  border-bottom: 1px solid;
+  padding-bottom: 2vh;
+}
+
+.dateWrapper {
+  display: flex;
+  justify-content: space-between;
+}
