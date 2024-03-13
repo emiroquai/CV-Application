@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import AddButton from "./AddButton";
+import DeleteButton from "./DeleteButton";
 import Input from "./Input";
 import Textarea from "./Textarea";
 
@@ -41,6 +42,11 @@ export default function Experience({state, setState}) {
               label="Description"
               state={state[index]}
               setState={setState} />
+            <DeleteButton
+              index={index}
+              state={state}
+              setState={setState}
+            />
             
           </div>
         )     

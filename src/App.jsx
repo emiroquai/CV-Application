@@ -15,20 +15,20 @@ function App() {
   })
 
   const [experience, setExperience] = useState([
-      {
-        job: "Senior Asteroid Miner Manager", 
-        employer: "SpaceY",
-        startDate: "2035-06-01",
-        endDate: "2040-10-03",
-        description: "Meetings in space, all day long."
-      },
-      {
-        job: "Asteroid Scrubber", 
-        employer: "SpaceY",
-        startDate: "02/2025",
-        endDate: "06/2035",
-        description: "Scrubby scrubby scrub scrub the space rocks, all day long."
-      },
+    {
+      job: "Senior Asteroid Miner Manager", 
+      employer: "SpaceY",
+      startDate: "2035-06-01",
+      endDate: "2040-10-03",
+      description: "Meetings in space, all day long."
+    },
+    {
+      job: "Asteroid Scrubber", 
+      employer: "SpaceY",
+      startDate: "02/2025",
+      endDate: "06/2035",
+      description: "Scrubby scrubby scrub scrub the space rocks, all day long."
+    },
     ])
 
   return (
