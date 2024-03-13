@@ -81,3 +81,12 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* Mobile */
+
+@media (max-width: 481px) {
+  main {
+    display: block;
+  }
+
+}

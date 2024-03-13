@@ -54,3 +54,11 @@ p {
   margin: 0;
   margin-top: 0.5em;
 }
+
+@media (max-width: 481px) {
+  #preview {
+    height: auto;
+    position: relative;
+    margin: 1vh 2vw;
+  }
+}
